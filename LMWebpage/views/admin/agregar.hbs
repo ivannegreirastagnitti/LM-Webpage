@@ -1,0 +1,23 @@
+<div style="margin: 0px; padding: 0px;">
+    <div class="container" style="margin: 2vh auto;">
+        <div>
+            <h2 style="text-align: center; margin: 10vh">Completá los datos para agregar tu novedad:</h2>
+            <form action="/admin/loged/agregar" method="post">
+                <div class="labelAgregar form-group">
+                    <input type="text" class="form-control" aria-describedby="userHelp" name="titulo"
+                        placeholder="Título">
+                </div>
+                <div class="labelAgregar form-group">
+                    <textarea type="text" class="form-control" placeholder="Subtítulo" name="subtitulo"></textarea>
+                </div>
+                <div class="labelAgregar form-group">
+                    <textarea type="text" class="form-control" placeholder="Cuerpo" name="cuerpo"></textarea>
+                </div>
+                <button type="submit" class="btnAgregar btn btn-primary"> Agregar</button>
+            </form>
+            {{#if error}}
+                <p style="margin-left: 13vw; margin-top: 2vh">{{message}}</p>
+            {{/if}}
+        </div>
+    </div>
+</div>

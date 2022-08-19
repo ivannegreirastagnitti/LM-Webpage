@@ -1,0 +1,46 @@
+<h1 style="margin: 100px 3vw;">Novedades</h1>
+<div class="novedades">
+    <div class="container" style="margin: 50px auto;">
+        <div class="row">
+            <div class="col">
+                <p style="float:right;">
+                    <span>Hola {{user}}!</span>
+                    <a style="text-align: right;" href="/" class="btn btn-danger">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a> 
+                </p>
+            </div>
+        </div>
+    </div>
+    <div style="margin: 1vh auto;" class="row">
+        <div class="col-7" style="margin-top: 9px;">
+            <h2>Lista de Novedades</h2>
+        </div>
+        <div style="text-align: right;" class="col-5 text-right">
+            <a href="/admin/loged/agregar" class="btn btn-success">Nuevo</a>
+        </div>
+    </div>
+</div>
+<div id="novedades" class="row">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr class="table-dark">
+                    <th scope="col">id</th>
+                    <th scope="col">Novedad</th>
+                    <th scope="col">Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each novedades}}
+                <tr>
+                    <th scope="row">{{id}}</th>
+                    <td>{{titulo}}</td>
+                    <td class="text_right">
+                        <a style="background-color: #157347;" href="/admin/loged/editar/{{id}}" class="btn btn-secondary">Editar</a>
+                        <a style="background-color: #bb2d3b;" href="/admin/loged/eliminar/{{id}}"  class="btn btn-secondary">Eliminar</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
